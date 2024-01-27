@@ -12,7 +12,7 @@ def app():
     st.write("Dive into the heart of the Premier League with Bloom's Stats Checker")
 
 
-    overall_stats_df = pd.read_csv("datasets/overall_stats.csv")
+    overall_stats_df = pd.read_csv("datasets/overall_stats2.csv")
 
 
     st.write("----")
