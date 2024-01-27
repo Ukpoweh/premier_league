@@ -8,7 +8,8 @@ import numpy as np
 def app():
     st.header("Welcome to The Stats Checker!")
 
-    st.text("Dive into the heart of the Premier League with Bloom's Stats Checker")
+
+    st.write("Dive into the heart of the Premier League with Bloom's Stats Checker")
 
 
     overall_stats_df = pd.read_csv("datasets/overall_stats.csv")
@@ -16,7 +17,7 @@ def app():
 
     st.write("----")
     with st.container():
-        st.text("View the live season's table and also past 5 seasons' table, reliving the highs and lows of your favorite teams.")
+        st.write("View the live season's table and also past 5 seasons' table, reliving the highs and lows of your favorite teams.")
         col1, col2 = st.columns([1, 1])
         with col1:
             st.markdown("**Live Season's Table**")
@@ -126,7 +127,7 @@ def app():
             st.dataframe(all_stats[2], use_container_width=True, hide_index=True)
             st.dataframe(all_stats[3], use_container_width=True, hide_index=True)
         except:
-            st.text(f"No data available for {selected_team} for {selected_year-1}/{selected_year} season")
+            st.write(f"No data available for {selected_team} for {selected_year-1}/{selected_year} season due to relegation from previous season")
 
     
     
