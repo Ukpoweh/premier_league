@@ -5,8 +5,9 @@ from streamlit_option_menu import option_menu
 import home, stats, prediction
 
 st.set_page_config(
-    page_title="PL Match Predictor",
-    layout="wide"
+    page_title="Bloom",
+    layout="wide",
+    page_icon=":soccer:"
 )
 
 class MultiApp:
@@ -42,7 +43,7 @@ class MultiApp:
             st.write(" ")
             st.write("-----")
         
-        st.sidebar.text("Built by Ukpoweh")
+        st.sidebar.markdown("Built by [Ukpoweh](https://github.com/Ukpoweh)")
         if app == "Home":
             home.app()
         if app == "Stats Checker":

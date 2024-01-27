@@ -6,7 +6,7 @@ import numpy as np
 
 
 def app():
-    st.header("Welcome to the Stats Checker!")
+    st.header("Welcome to The Stats Checker!")
 
     st.text("Dive into the heart of the Premier League with Bloom's Stats Checker")
 

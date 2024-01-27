@@ -3,7 +3,7 @@ import streamlit as st
 def app():
   
   st.title("Welcome to Bloom – Your Premier League Hub")
-  st.image("wembley.jpg")
+  st.image("wembley.jpg", use_column_width=True)
   st.markdown(
     """
 
