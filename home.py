@@ -1,10 +1,12 @@
 import streamlit as st
 
 def app():
+  
+  st.title("Welcome to Bloom – Your Premier League Hub")
+  st.image("wembley.jpg")
   st.markdown(
     """
 
-**Welcome to Bloom – Your Premier League Hub**
 
 Explore the excitement of the Premier League like never before with Bloom, a multi-page app that brings you closer to the action. Navigate through our feature-packed pages:
 

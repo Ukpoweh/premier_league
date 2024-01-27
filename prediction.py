@@ -17,40 +17,22 @@ encoder = pickle.load(open('encoder.pkl', 'rb'))
 
 def app():
     st.header("Welcome To Our Match Predictor!")
+    st.text("Get predictions for upcoming Premier League matches")
     st.write("----")
-    matches_df = pd.read_csv("matches.csv")
-    matches_rolling = pd.read_csv('rolling.csv')
+    matches_df = pd.read_csv("datasets/matches.csv")
+    matches_rolling = pd.read_csv('datasets/rolling.csv')
     teams = list(matches_df[matches_df["Season"]==2024]["Team"].unique())
 
-    col1, col2, col3 = st.columns([1,1,1])
+    col1, col2= st.columns([1,1])
     with col1:
     
         home_team = st.selectbox("Select the home team", teams)
     with col2:
 
         away_team = st.selectbox("Select the away team", teams)
-    #st.write(match)
-    with col3:
-
-        day = st.selectbox("Which day is the match to be played?", ["Sun", "Sat", "Mon", "Tue", "Wed", "Thur", "Fri"])
 
 
-    day_code = 0
 
-    if day == "Mon":
-        day_code = 0
-    elif day == "Tue":
-        day_code = 1
-    elif day == "Wed":
-        day_code = 2
-    elif day == "Thur":
-        day_code = 3
-    elif day == "Fri":
-        day_code = 4
-    elif day == "Sat":
-        day_code = 5
-    elif day == "Sun":
-        day_code = 6
     
 
     predictors = ["GF_rolling", "GA_rolling", "Poss_rolling", "Sh_rolling", 
@@ -63,7 +45,7 @@ def app():
     stats_and_teams = np.concatenate([labeled_categories, rolling_stats], axis=1)
     
 
-    day_and_venue = [day_code, 1]
+    day_and_venue = [1]
     day_and_venue = np.array([day_and_venue]).reshape(1, -1)
 
     features = np.concatenate([day_and_venue, stats_and_teams], axis=1)
