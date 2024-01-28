@@ -42,6 +42,10 @@ class MultiApp:
             st.write(" ")
             st.write(" ")
             st.write("-----")
+
+        #st.sidebar.write("Data will be updated at the end of every gameweek")
+
+        #st.write("-----")
         
         st.sidebar.markdown("Built by [Ukpoweh](https://github.com/Ukpoweh)")
         if app == "Home":
