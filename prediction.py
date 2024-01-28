@@ -17,7 +17,7 @@ encoder = pickle.load(open('notebooks/encoder.pkl', 'rb'))
 
 def app():
     st.header("Welcome to the Match Predictor!")
-    st.text("Get predictions for upcoming Premier League matches")
+    st.write("Get predictions for upcoming Premier League matches")
     st.write("----")
     matches_df = pd.read_csv("datasets/matches.csv")
     matches_rolling = pd.read_csv('datasets/rolling.csv')
