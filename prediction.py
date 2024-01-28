@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 #background = st.get_option('theme.backgroundColor')
 #plt.style.use(background)
 
-model = pickle.load(open('model.pkl', 'rb'))
-scaler = pickle.load(open('scaler.pkl', 'rb'))
-encoder = pickle.load(open('encoder.pkl', 'rb'))
+model = pickle.load(open('notebooks/model.pkl', 'rb'))
+scaler = pickle.load(open('notebooks/scaler.pkl', 'rb'))
+encoder = pickle.load(open('notebooks/encoder.pkl', 'rb'))
 
 
 def app():
